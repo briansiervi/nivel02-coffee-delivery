@@ -9,6 +9,9 @@ Esse projeto tem o intuito de demonstrar como gerenciar um carrinho de compras d
 
 <!-- ## [Projeto publicado]() -->
 
+## Tecnologias
+Styled-components,
+
 ## Material de apoio
 
 - [Deploy no github pages](https://www.youtube.com/watch?v=-weTjP3pYxs&t=427s&ab_channel=MatheusBattisti-HoradeCodar)
