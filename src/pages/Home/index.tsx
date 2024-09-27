@@ -4,8 +4,8 @@ export function Home() {
   return (
     <div>
       <div className='flex flex-row'>
-        <div className='flex flex-col'>
-          <span className='text-4xl font-baloo2 font-bold'>
+        <div className='flex flex-col min-w-[36.75rem]'>
+          <span className='text-4xl font-baloo2 text-baloo2-title-xl'>
             Encontre o café perfeito para qualquer hora do dia
           </span>
           <span>
@@ -19,12 +19,10 @@ export function Home() {
             <span>O café chega fresquinho até você</span>
           </div>
         </div>
-        <div>
+        <div className='min-w-[29.75rem] min-h-[22.5rem]'>
           <img
             src={bigCoffee}
             alt='Imagem de um grande copo de café branco, com uma tampa preta e um adesivo também preto, descrito "Coffee delivery", com o logotipo do site'
-            width={476}
-            height={360}
           />
         </div>
       </div>
