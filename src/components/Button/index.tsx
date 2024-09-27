@@ -14,7 +14,12 @@ export function Button({ quantity }: ButtonProps) {
   }
 
   return (
-    <ButtonContainer type='button' onClick={checkoutLink}>
+    <ButtonContainer
+      type='button'
+      onClick={checkoutLink}
+      color={'yellowDark'}
+      $backgroundColor={'yellowLight'}
+    >
       <ShoppingCart size={22} weight='fill' />
       {quantity && <span>{quantity}</span>}
     </ButtonContainer>
