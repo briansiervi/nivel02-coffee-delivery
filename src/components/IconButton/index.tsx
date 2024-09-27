@@ -2,11 +2,11 @@ import { ButtonContainer } from './styles'
 import { ShoppingCart } from '@phosphor-icons/react'
 import { useNavigate } from 'react-router-dom'
 
-interface ButtonProps {
+interface IconButtonProps {
   quantity?: number
 }
 
-export function Button({ quantity }: ButtonProps) {
+export function IconButton({ quantity }: IconButtonProps) {
   const navigate = useNavigate()
 
   const checkoutLink = () => {

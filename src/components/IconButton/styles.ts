@@ -19,12 +19,12 @@ const COLORS = {
   white: 'white',
 }
 
-interface ButtonProps {
+interface IconButtonProps {
   color: keyof typeof COLORS
   $backgroundColor: keyof typeof COLORS
 }
 
-export const ButtonContainer = styled.button<ButtonProps>`
+export const ButtonContainer = styled.button<IconButtonProps>`
   display: flex;
   align-items: center;
   justify-content: center;
@@ -48,6 +48,6 @@ export const ButtonContainer = styled.button<ButtonProps>`
     border:solid transparent;
     border-radius: 50%;
     transform: translate(1rem,-1.25rem);
-    background-color: ${props => props.theme['yellow-dark']};
+    background-color: ${props => props.theme[COLORS[props.color]]};
   }
 `

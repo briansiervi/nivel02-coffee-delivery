@@ -1,6 +1,6 @@
 import { HeaderContainer } from './styles'
 import logo from '../../assets/logo.svg'
-import { Button } from '../Button'
+import { IconButton } from '../IconButton'
 import type { LocationProps } from '../Location'
 import { Location } from '../Location'
 
@@ -13,7 +13,7 @@ export function Header({ location }: LocationProps) {
       />
       <nav>
         <Location location={location} />
-        <Button quantity={3} />
+        <IconButton quantity={3} />
       </nav>
     </HeaderContainer>
   )
