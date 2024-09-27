@@ -4,7 +4,7 @@ import { Header } from '../../components/Header'
 
 export function DefaultLayout() {
   return (
-    <LayoutContainer>
+    <LayoutContainer className='px-5 md:px-10 lg:xl:2xl:px-40'>
       <Header location='Porto Alegre, RS' />
       <Outlet />
     </LayoutContainer>
