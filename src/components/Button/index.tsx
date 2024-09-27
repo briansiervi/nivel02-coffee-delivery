@@ -2,7 +2,11 @@ import { ButtonContainer } from './styles'
 import { ShoppingCart } from '@phosphor-icons/react'
 import { useNavigate } from 'react-router-dom'
 
-export function Button() {
+interface ButtonProps {
+  quantity?: number
+}
+
+export function Button({ quantity }: ButtonProps) {
   const navigate = useNavigate()
 
   const checkoutLink = () => {
@@ -12,7 +16,7 @@ export function Button() {
   return (
     <ButtonContainer type='button' onClick={checkoutLink}>
       <ShoppingCart size={22} weight='fill' />
-      <span>3</span>
+      {quantity && <span>{quantity}</span>}
     </ButtonContainer>
   )
 }
