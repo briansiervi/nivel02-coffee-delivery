@@ -23,60 +23,53 @@ export function Home() {
               mb-8 s:mb-14 md:mb-20 l:mb-28
             '
           >
-            <div
-              className='text-base-text flex flex-row gap-3
-                s:basis-1/2 md:basis-1/2 l:basis-1/2'
-            >
-              <div>
-                <ButtonContainer
-                  type='button'
-                  color={'white'}
-                  $backgroundColor={'yellowDark'}
-                  $iconType={'circle'}
-                >
-                  <ShoppingCart size={16} weight='fill' />
-                </ButtonContainer>
-              </div>
-              <span>Compra simples e segura</span>
+            <div className='text-base-text flex flex-row gap-3 min-w-40'>
+              <ButtonContainer
+                type='button'
+                color={'white'}
+                $backgroundColor={'yellowDark'}
+                $iconType={'circle'}
+              >
+                <ShoppingCart
+                  size={16}
+                  weight='fill'
+                  className='bg-yellow-dark'
+                />
+              </ButtonContainer>
+              <p className='content-center'>Compra simples e segura</p>
             </div>
-            <div className='flex flex-row gap-3 s:basis-1/2 md:basis-1/2 l:basis-1/2'>
-              <div>
-                <ButtonContainer
-                  type='button'
-                  color={'white'}
-                  $backgroundColor={'baseText'}
-                  $iconType={'circle'}
-                >
-                  <Package size={16} weight='fill' />
-                </ButtonContainer>
-              </div>
-              <span>Embalagem mantém o café intacto</span>
+            <div className='flex flex-row gap-3 '>
+              <ButtonContainer
+                type='button'
+                color={'white'}
+                $backgroundColor={'baseText'}
+                $iconType={'circle'}
+              >
+                <Package size={16} weight='fill' className='bg-base-text' />
+              </ButtonContainer>
+              <p className='content-center'>Embalagem mantém o café intacto</p>
             </div>
-            <div className='flex flex-row gap-3 s:basis-1/2 md:basis-1/2 l:basis-1/2'>
-              <div>
-                <ButtonContainer
-                  type='button'
-                  color={'white'}
-                  $backgroundColor={'yellow'}
-                  $iconType={'circle'}
-                >
-                  <Clock size={16} weight='fill' />
-                </ButtonContainer>
-              </div>
-              <span>Entrega rápida e rastreada</span>
+            <div className='flex flex-row gap-3  min-w-40'>
+              <ButtonContainer
+                type='button'
+                color={'white'}
+                $backgroundColor={'yellow'}
+                $iconType={'circle'}
+              >
+                <Clock size={16} weight='fill' className='bg-yellow' />
+              </ButtonContainer>
+              <p className='content-center'>Entrega rápida e rastreada</p>
             </div>
-            <div className='flex flex-row gap-3 s:basis-1/2 md:basis-1/2 l:basis-1/2'>
-              <div>
-                <ButtonContainer
-                  type='button'
-                  color={'white'}
-                  $backgroundColor={'purple'}
-                  $iconType={'circle'}
-                >
-                  <Coffee size={16} weight='fill' />
-                </ButtonContainer>
-              </div>
-              <span>O café chega fresquinho até você</span>
+            <div className='flex flex-row gap-3 '>
+              <ButtonContainer
+                type='button'
+                color={'white'}
+                $backgroundColor={'purple'}
+                $iconType={'circle'}
+              >
+                <Coffee size={16} weight='fill' className='bg-purple' />
+              </ButtonContainer>
+              <p className='content-center'>O café chega fresquinho até você</p>
             </div>
           </div>
         </div>

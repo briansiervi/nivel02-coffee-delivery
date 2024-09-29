@@ -19,10 +19,4 @@ export const HeaderContainer = styled.header`
     justify-content: center;
     align-items: center;
   }
-
-  button {
-    background-color: 'green';
-    color: 'green';
-    background: 'green'
-  }
 `

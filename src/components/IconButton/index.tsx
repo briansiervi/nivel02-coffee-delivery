@@ -21,7 +21,7 @@ export function IconButton({ quantity }: IconButtonProps) {
       $backgroundColor={'yellowLight'}
       $iconType='square'
     >
-      <ShoppingCart size={22} weight='fill' />
+      <ShoppingCart size={22} weight='fill' className='bg-yellow-light' />
       {quantity && <span>{quantity}</span>}
     </ButtonContainer>
   )
