@@ -22,6 +22,7 @@ const COLORS = {
 interface IconButtonProps {
   color: keyof typeof COLORS
   $backgroundColor: keyof typeof COLORS
+  $iconType: 'circle' | 'square'
 }
 
 export const ButtonContainer = styled.button<IconButtonProps>`
@@ -32,9 +33,9 @@ export const ButtonContainer = styled.button<IconButtonProps>`
   color: ${props => props.theme[COLORS[props.color]]};
   background-color: ${props => props.theme[COLORS[props.$backgroundColor]]};
   border: none;
-  border-radius: 0.375rem;
-  width: 2.375rem;
-  height: 2.375rem;
+  border-radius: ${props => (props.$iconType === 'square' ? '0.375rem' : '50%')};
+  width: ${props => (props.$iconType === 'square' ? '2.375rem' : '2rem')};
+  height: ${props => (props.$iconType === 'square' ? '2.375rem' : '2rem')};
 
   span {
     display:flex;

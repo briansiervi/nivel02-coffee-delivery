@@ -19,6 +19,7 @@ export function IconButton({ quantity }: IconButtonProps) {
       onClick={checkoutLink}
       color={'yellowDark'}
       $backgroundColor={'yellowLight'}
+      $iconType='square'
     >
       <ShoppingCart size={22} weight='fill' />
       {quantity && <span>{quantity}</span>}

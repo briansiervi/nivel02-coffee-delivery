@@ -1,4 +1,6 @@
+import { Clock, Coffee, Package, ShoppingCart } from '@phosphor-icons/react'
 import bigCoffee from '../../assets/big-coffee.svg'
+import { ButtonContainer } from '../../components/IconButton/styles'
 
 export function Home() {
   return (
@@ -6,37 +8,74 @@ export function Home() {
       <div className='flex flex-row gap-4 md:gap-8 l:gap-14'>
         <div className='flex flex-col w-3/5'>
           <span
-            className='font-baloo2
-            text-baloo2-title-xs
-            s:text-baloo2-title-s
-            md:text-baloo2-title-l
-            l:text-baloo2-title-l
-            xl:text-baloo2-title-xl'
+            className='font-baloo2 text-base-title
+              text-baloo2-title-xs s:text-baloo2-title-s md:text-baloo2-title-l l:text-baloo2-title-l xl:text-baloo2-title-xl'
           >
             Encontre o café perfeito para qualquer hora do dia
           </span>
-          <span className='roboto-text-xs s:roboto-text-s md:roboto-text-m l:roboto-text-l'>
+          <span className='text-base-subtitle roboto-text-xs s:roboto-text-s md:roboto-text-m l:roboto-text-l'>
             Com o Coffee Delivery você recebe seu café onde estiver, a qualquer
             hora
           </span>
           <div
-            className='flex flex-row flex-wrap roboto-text-tag
-            mt-4
-            s:mt-8
-            md:mt-8
-            l:mt-16
+            className='flex flex-row flex-wrap text-roboto-text-tag gap-4
+              mt-4 s:mt-8 md:mt-8 l:mt-16
+              mb-8 s:mb-14 md:mb-20 l:mb-28
             '
           >
-            <div className='s:basis-1/2 md:basis-1/2 l:basis-1/2'>
+            <div
+              className='text-base-text flex flex-row gap-3
+                s:basis-1/2 md:basis-1/2 l:basis-1/2'
+            >
+              <div>
+                <ButtonContainer
+                  type='button'
+                  color={'white'}
+                  $backgroundColor={'yellowDark'}
+                  $iconType={'circle'}
+                >
+                  <ShoppingCart size={16} weight='fill' />
+                </ButtonContainer>
+              </div>
               <span>Compra simples e segura</span>
             </div>
-            <div className='s:basis-1/2 md:basis-1/2 l:basis-1/2'>
+            <div className='flex flex-row gap-3 s:basis-1/2 md:basis-1/2 l:basis-1/2'>
+              <div>
+                <ButtonContainer
+                  type='button'
+                  color={'white'}
+                  $backgroundColor={'baseText'}
+                  $iconType={'circle'}
+                >
+                  <Package size={16} weight='fill' />
+                </ButtonContainer>
+              </div>
               <span>Embalagem mantém o café intacto</span>
             </div>
-            <div className='s:basis-1/2 md:basis-1/2 l:basis-1/2'>
+            <div className='flex flex-row gap-3 s:basis-1/2 md:basis-1/2 l:basis-1/2'>
+              <div>
+                <ButtonContainer
+                  type='button'
+                  color={'white'}
+                  $backgroundColor={'yellow'}
+                  $iconType={'circle'}
+                >
+                  <Clock size={16} weight='fill' />
+                </ButtonContainer>
+              </div>
               <span>Entrega rápida e rastreada</span>
             </div>
-            <div className='s:basis-1/2 md:basis-1/2 l:basis-1/2'>
+            <div className='flex flex-row gap-3 s:basis-1/2 md:basis-1/2 l:basis-1/2'>
+              <div>
+                <ButtonContainer
+                  type='button'
+                  color={'white'}
+                  $backgroundColor={'purple'}
+                  $iconType={'circle'}
+                >
+                  <Coffee size={16} weight='fill' />
+                </ButtonContainer>
+              </div>
               <span>O café chega fresquinho até você</span>
             </div>
           </div>
