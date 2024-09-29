@@ -34,6 +34,7 @@ export function Home() {
                   size={16}
                   weight='fill'
                   className='bg-yellow-dark'
+                  alt='Ícone de carrinho de compras na cor branca e fundo marrom escuro'
                 />
               </ButtonContainer>
               <p className='content-center'>Compra simples e segura</p>
@@ -45,7 +46,12 @@ export function Home() {
                 $backgroundColor={'baseText'}
                 $iconType={'circle'}
               >
-                <Package size={16} weight='fill' className='bg-base-text' />
+                <Package
+                  size={16}
+                  weight='fill'
+                  className='bg-base-text'
+                  alt='Ícone de caixa de embalagens na cor branca e fundo preto claro'
+                />
               </ButtonContainer>
               <p className='content-center'>Embalagem mantém o café intacto</p>
             </div>
@@ -56,7 +62,12 @@ export function Home() {
                 $backgroundColor={'yellow'}
                 $iconType={'circle'}
               >
-                <Clock size={16} weight='fill' className='bg-yellow' />
+                <Clock
+                  size={16}
+                  weight='fill'
+                  className='bg-yellow'
+                  alt='Ícone de caixa de relógio na cor branca e fundo laranja claro'
+                />
               </ButtonContainer>
               <p className='content-center'>Entrega rápida e rastreada</p>
             </div>
@@ -67,7 +78,12 @@ export function Home() {
                 $backgroundColor={'purple'}
                 $iconType={'circle'}
               >
-                <Coffee size={16} weight='fill' className='bg-purple' />
+                <Coffee
+                  size={16}
+                  weight='fill'
+                  className='bg-purple'
+                  alt='Ícone de xícara de café na cor branca e fundo roxo'
+                />
               </ButtonContainer>
               <p className='content-center'>O café chega fresquinho até você</p>
             </div>

@@ -21,7 +21,12 @@ export function IconButton({ quantity }: IconButtonProps) {
       $backgroundColor={'yellowLight'}
       $iconType='square'
     >
-      <ShoppingCart size={22} weight='fill' className='bg-yellow-light' />
+      <ShoppingCart
+        size={22}
+        weight='fill'
+        className='bg-yellow-light'
+        alt='Ícone de carrinho de compras na cor marrom escuro e fundo marrom claro, com número indicativo de quantos produtos foram selecionados ao lado superior direito.'
+      />
       {quantity && <span>{quantity}</span>}
     </ButtonContainer>
   )
