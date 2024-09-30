@@ -1,6 +1,7 @@
 import { Clock, Coffee, Package, ShoppingCart } from '@phosphor-icons/react'
 import bigCoffee from '../../assets/big-coffee.svg'
 import { ButtonContainer } from '../../components/IconButton/styles'
+import { CoffeeCard } from '../../components/CoffeeCard'
 
 export function Home() {
   return (
@@ -9,7 +10,7 @@ export function Home() {
         <div className='flex flex-col w-3/5'>
           <span
             className='font-baloo2 text-base-title
-              text-baloo2-title-xs s:text-baloo2-title-s md:text-baloo2-title-l l:text-baloo2-title-l xl:text-baloo2-title-xl'
+              text-baloo2-title-s s:text-baloo2-title-s md:text-baloo2-title-l l:text-baloo2-title-l xl:text-baloo2-title-xl'
           >
             Encontre o café perfeito para qualquer hora do dia
           </span>
@@ -97,11 +98,25 @@ export function Home() {
         </div>
       </div>
       <div>
-        <span>Nossos cafés</span>
-        <div>
-          <span>Expresso Tradicional</span>
-          <span>Expresso Americano</span>
-          <span>Expresso Cremoso</span>
+        <span
+          className='font-baloo2 text-base-subtitle mt-8
+            text-baloo2-title-xs md:text-baloo2-title-m l:text-baloo2-title-m xl:text-baloo2-title-l'
+        >
+          Nossos cafés
+        </span>
+        <div
+          className='mt-14 flex flex-row
+            gap-2 md:gap-4 l:gap-6 xl:gap-8'
+        >
+          <CoffeeCard
+            className={'w-1/4'}
+            title='Expresso Tradicional'
+            subTitle='O tradicional café feito com água quente e grãos moídos'
+            price={9.9}
+          />
+          <span className='w-1/4'>Expresso Americano</span>
+          <span className='w-1/4'>Expresso Cremoso</span>
+          <span className='w-1/4'>Expresso Gelado</span>
         </div>
       </div>
     </div>
