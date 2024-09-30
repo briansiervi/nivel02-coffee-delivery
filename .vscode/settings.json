@@ -1,3 +1,11 @@
 {
-  "conventionalCommits.scopes": ["config"]
+  "conventionalCommits.scopes": ["config"],
+  "cSpell.words": [
+    "cuban",
+    "hawaiian",
+    "macchiato",
+    "Macchiato",
+    "mocaccino",
+    "Mocaccino"
+  ]
 }

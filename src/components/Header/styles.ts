@@ -10,13 +10,4 @@ export const HeaderContainer = styled.header`
     display: flex;
     gap:0.75rem;
   }
-
-  a {
-    height: 2.375rem;
-    min-width: 2.375rem;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
 `

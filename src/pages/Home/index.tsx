@@ -1,5 +1,5 @@
 import { Clock, Coffee, Package, ShoppingCart } from '@phosphor-icons/react'
-import bigCoffee from '../../assets/big-coffee.svg'
+import BigCoffee from '../../assets/big-coffee.svg'
 import { ButtonContainer } from '../../components/IconButton/styles'
 import { CoffeeCard } from '../../components/CoffeeCard'
 
@@ -92,7 +92,7 @@ export function Home() {
         </div>
         <div className='w-2/5'>
           <img
-            src={bigCoffee}
+            src={BigCoffee}
             alt='Imagem de um grande copo de café branco, com uma tampa preta e um adesivo também preto, descrito "Coffee delivery", com o logotipo do site'
           />
         </div>
@@ -113,6 +113,9 @@ export function Home() {
             title='Expresso Tradicional'
             subTitle='O tradicional café feito com água quente e grãos moídos'
             price={9.9}
+            image={'traditionalEspresso'}
+            tagNames={['tradicional']}
+            alt='Imagem de um grande copo de café branco, com uma tampa preta e um adesivo também preto, descrito "Coffee delivery", com o logotipo do site'
           />
           <span className='w-1/4'>Expresso Americano</span>
           <span className='w-1/4'>Expresso Cremoso</span>
