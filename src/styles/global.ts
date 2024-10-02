@@ -5,7 +5,6 @@ export const GlobalStyle = createGlobalStyle`
     margin:0;
     padding: 0;
     box-sizing: border-box;
-    background-color: ${props => props.theme.background}
   }
 
   :focus{
@@ -14,7 +13,7 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   body{
-    background: ${props => props.theme.white};
+    background: ${props => props.theme.background};
   }
 
   body, input, textarea, button {

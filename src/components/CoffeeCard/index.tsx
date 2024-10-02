@@ -32,14 +32,14 @@ const COFFEES = {
   irish: Irish,
 }
 
-type TAG = 'tradicional' | 'gelado' | 'com leite' | 'especial' | 'alcoólico'
+type TAGNAME = 'tradicional' | 'gelado' | 'com leite' | 'especial' | 'alcoólico'
 
 export interface CoffeeCardProps extends React.HTMLAttributes<HTMLDivElement> {
   title: string
   subTitle: string
   price: number
   image: keyof typeof COFFEES
-  tagNames: [TAG]
+  tagNames: [TAGNAME]
   alt: string
 }
 
@@ -53,9 +53,15 @@ export function CoffeeCard({
   ...props
 }: CoffeeCardProps) {
   return (
-    <div {...props} className='flex flex-col w-64 h-80 bg-black'>
-      <div className='flex flex-col'>
-        <img src={COFFEES[image]} alt={alt} />
+    <div
+      {...props}
+      className='flex flex-col w-64 h-80 bg-base-card rounded-tr-3xl rounded-bl-3xl'
+    >
+      <div className='flex justify-center'>
+        <img className='' src={COFFEES[image]} alt={alt} />
+      </div>
+
+      <div className='flex flex-col top-3'>
         <div className='flex flew-row gap-1'>
           {tagNames.map(tagName => (
             <div key={tagName}>{tagName}</div>
@@ -63,22 +69,22 @@ export function CoffeeCard({
         </div>
         <p>{title}</p>
         <p>{subTitle}</p>
-      </div>
-      <div className='flex flex-row'>
-        <p>{price}</p>
-        <span>-1+</span>
-        <ButtonContainer
-          color='background'
-          $backgroundColor='purpleDark'
-          $iconType='square'
-        >
-          <ShoppingCart
-            size={24}
-            weight='fill'
-            className='bg-purple-dark'
-            alt='Ícone de carrinho de compras na cor branca e fundo marrom escuro'
-          />
-        </ButtonContainer>
+        <div className='flex flex-row'>
+          <p>{price}</p>
+          <span>-1+</span>
+          <ButtonContainer
+            color='background'
+            $backgroundColor='purpleDark'
+            $iconType='square'
+          >
+            <ShoppingCart
+              size={24}
+              weight='fill'
+              className='bg-purple-dark'
+              alt='Ícone de carrinho de compras na cor branca e fundo marrom escuro'
+            />
+          </ButtonContainer>
+        </div>
       </div>
     </div>
   )
