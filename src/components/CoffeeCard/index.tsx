@@ -14,6 +14,7 @@ import Cuban from '../../assets/cuban.svg'
 import Hawaiian from '../../assets/hawaiian.svg'
 import Arabic from '../../assets/arabic.svg'
 import Irish from '../../assets/irish.svg'
+import { NumericFormat } from 'react-number-format'
 
 const COFFEES = {
   traditionalEspresso: TraditionalEspresso,
@@ -78,9 +79,21 @@ export function CoffeeCard({
         >
           {title}
         </p>
-        <p>{subTitle}</p>
-        <div className='flex flex-row'>
-          <p>{price}</p>
+        <p className='pt-2 text-base-label text-roboto-text-xs md:text-roboto-text-s'>
+          {subTitle}
+        </p>
+        <div className='flex flex-row pt-8 pb-5'>
+          <NumericFormat
+            value={price}
+            displayType={'text'}
+            allowNegative={false}
+            allowLeadingZeros
+            thousandSeparator='.'
+            decimalScale={2}
+            decimalSeparator=','
+            fixedDecimalScale
+            prefix={'R$'}
+          />
           <span>-1+</span>
           <ButtonContainer
             color='background'

@@ -73,7 +73,7 @@ export default {
           '12px',
           {
             lineHeight: '130%',
-            fontWeight: '700', //bold
+            fontWeight: '400', //regular
           },
         ],
         'roboto-text-tag': [
