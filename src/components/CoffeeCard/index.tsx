@@ -55,19 +55,29 @@ export function CoffeeCard({
   return (
     <div
       {...props}
-      className='flex flex-col w-64 h-80 bg-base-card rounded-tr-3xl rounded-bl-3xl'
+      className='flex flex-col w-64 bg-base-card rounded-tr-[32px] rounded-bl-[32px]'
     >
-      <div className='flex justify-center'>
-        <img className='' src={COFFEES[image]} alt={alt} />
+      <div className='relative -top-6 flex justify-center'>
+        <img src={COFFEES[image]} alt={alt} />
       </div>
 
-      <div className='flex flex-col top-3'>
-        <div className='flex flew-row gap-1'>
+      <div className='flex flex-col text-center px-2'>
+        <div className='flex flew-row gap-1 justify-center'>
           {tagNames.map(tagName => (
-            <div key={tagName}>{tagName}</div>
+            <span
+              className='bg-yellow-light text-yellow-dark text-roboto-text-tag px-2 py-1 rounded-lg'
+              key={tagName}
+            >
+              {tagName.toUpperCase()}
+            </span>
           ))}
         </div>
-        <p>{title}</p>
+        <p
+          className='pt-4 font-baloo2 text-base-title
+            text-baloo2-title-xs md:text-baloo2-title-xs l:text-baloo2-title-s xl:text-baloo2-title-s'
+        >
+          {title}
+        </p>
         <p>{subTitle}</p>
         <div className='flex flex-row'>
           <p>{price}</p>
