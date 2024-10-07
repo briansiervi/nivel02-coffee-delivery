@@ -1,3 +1,4 @@
+import * as changeCase from 'change-case'
 import { ShoppingCart } from '@phosphor-icons/react'
 import { ButtonContainer } from '../IconButton/styles'
 import TraditionalEspresso from '../../assets/traditional-espresso.svg'
@@ -83,13 +84,13 @@ export function CoffeeCard({
           className='pt-4 font-baloo2 text-base-title
             text-baloo2-title-xs'
         >
-          {title}
+          {changeCase.capitalCase(title)}
         </label>
         <p
           className='pt-2 text-base-label
           font-roboto text-roboto-text-xs md:text-roboto-text-s'
         >
-          {subTitle}
+          {changeCase.sentenceCase(subTitle)}
         </p>
 
         <div className='flex flex-row flex-wrap pt-8 pb-5 justify-between'>
