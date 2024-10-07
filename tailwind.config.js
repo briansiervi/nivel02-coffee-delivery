@@ -15,35 +15,35 @@ export default {
           '48px',
           {
             lineHeight: '130%',
-            fontWeight: '800', //extraBold
+            fontWeight: '800',
           },
         ],
         'baloo2-title-l': [
           '32px',
           {
             lineHeight: '130%',
-            fontWeight: '800', //extraBold
+            fontWeight: '800',
           },
         ],
         'baloo2-title-m': [
           '24px',
           {
             lineHeight: '130%',
-            fontWeight: '800', //extraBold
+            fontWeight: '800',
           },
         ],
         'baloo2-title-s': [
           '20px',
           {
             lineHeight: '130%',
-            fontWeight: '700', //bold
+            fontWeight: '700',
           },
         ],
         'baloo2-title-xs': [
           '18px',
           {
             lineHeight: '130%',
-            fontWeight: '700', //bold
+            fontWeight: '700',
           },
         ],
 
@@ -52,49 +52,49 @@ export default {
           '20px',
           {
             lineHeight: '130%',
-            fontWeight: '400', //regular
+            fontWeight: '400',
           },
         ],
         'roboto-text-m': [
           '16px',
           {
             lineHeight: '130%',
-            fontWeight: '400', //regular
+            fontWeight: '400',
           },
         ],
         'roboto-text-s': [
           '14px',
           {
             lineHeight: '130%',
-            fontWeight: '400', //regular
+            fontWeight: '400',
           },
         ],
         'roboto-text-xs': [
           '12px',
           {
             lineHeight: '130%',
-            fontWeight: '400', //regular
+            fontWeight: '700',
           },
         ],
         'roboto-text-tag': [
           '10px',
           {
             lineHeight: '130%',
-            fontWeight: '400', //regular
+            fontWeight: '400',
           },
         ],
         'roboto-text-button-g': [
           '14px',
           {
             lineHeight: '160%',
-            fontWeight: '700', //bold
+            fontWeight: '700',
           },
         ],
         'roboto-text-button-m': [
           '12px',
           {
             lineHeight: '160%',
-            fontWeight: '700', //bold
+            fontWeight: '400',
           },
         ],
       },

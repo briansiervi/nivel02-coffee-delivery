@@ -109,17 +109,41 @@ export function Home() {
             gap-2 md:gap-4 l:gap-6 xl:gap-8'
         >
           <CoffeeCard
-            className={'w-1/4'}
             title='Expresso Tradicional'
             subTitle='O tradicional café feito com água quente e grãos moídos'
             price={9.9}
             image={'traditionalEspresso'}
             tagNames={['tradicional']}
             alt='Imagem de um grande copo de café branco, com uma tampa preta e um adesivo também preto, descrito "Coffee delivery", com o logotipo do site'
+            maximumStock={99}
           />
-          <span className='w-1/4'>Expresso Americano</span>
-          <span className='w-1/4'>Expresso Cremoso</span>
-          <span className='w-1/4'>Expresso Gelado</span>
+          <CoffeeCard
+            title='Expresso Americano'
+            subTitle='Expresso diluído, menos intenso que o tradicional'
+            price={9.9}
+            image={'americanEspresso'}
+            tagNames={['tradicional']}
+            alt=''
+            maximumStock={99}
+          />
+          <CoffeeCard
+            title='Expresso Cremoso'
+            subTitle='Café expresso tradicional com espuma cremosa'
+            price={9.9}
+            image={'creamyEspresso'}
+            tagNames={['tradicional']}
+            alt=''
+            maximumStock={99}
+          />
+          <CoffeeCard
+            title='Expresso Gelado'
+            subTitle='Bebida preparada com café expresso e cubos de gelo'
+            price={9.9}
+            image={'icedEspresso'}
+            tagNames={['tradicional']}
+            alt=''
+            maximumStock={99}
+          />
         </div>
       </div>
     </div>

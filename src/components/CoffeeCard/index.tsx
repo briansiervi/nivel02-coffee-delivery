@@ -15,6 +15,7 @@ import Hawaiian from '../../assets/hawaiian.svg'
 import Arabic from '../../assets/arabic.svg'
 import Irish from '../../assets/irish.svg'
 import { NumericFormat } from 'react-number-format'
+import { useState } from 'react'
 
 const COFFEES = {
   traditionalEspresso: TraditionalEspresso,
@@ -42,6 +43,7 @@ export interface CoffeeCardProps extends React.HTMLAttributes<HTMLDivElement> {
   image: keyof typeof COFFEES
   tagNames: [TAGNAME]
   alt: string
+  maximumStock: number
 }
 
 export function CoffeeCard({
@@ -51,8 +53,11 @@ export function CoffeeCard({
   image,
   tagNames,
   alt,
+  maximumStock,
   ...props
 }: CoffeeCardProps) {
+  const [actualStock, setActualStock] = useState(0)
+
   return (
     <div
       {...props}
@@ -73,40 +78,89 @@ export function CoffeeCard({
             </span>
           ))}
         </div>
-        <p
+        <label
+          htmlFor={`${title}quantity`}
           className='pt-4 font-baloo2 text-base-title
-            text-baloo2-title-xs md:text-baloo2-title-xs l:text-baloo2-title-s xl:text-baloo2-title-s'
+            text-baloo2-title-xs'
         >
           {title}
-        </p>
-        <p className='pt-2 text-base-label text-roboto-text-xs md:text-roboto-text-s'>
+        </label>
+        <p
+          className='pt-2 text-base-label
+          font-roboto text-roboto-text-xs md:text-roboto-text-s'
+        >
           {subTitle}
         </p>
-        <div className='flex flex-row pt-8 pb-5'>
-          <NumericFormat
-            value={price}
-            displayType={'text'}
-            allowNegative={false}
-            allowLeadingZeros
-            thousandSeparator='.'
-            decimalScale={2}
-            decimalSeparator=','
-            fixedDecimalScale
-            prefix={'R$'}
-          />
-          <span>-1+</span>
-          <ButtonContainer
-            color='background'
-            $backgroundColor='purpleDark'
-            $iconType='square'
-          >
-            <ShoppingCart
-              size={24}
-              weight='fill'
-              className='bg-purple-dark'
-              alt='Ícone de carrinho de compras na cor branca e fundo marrom escuro'
+
+        <div className='flex flex-row flex-wrap pt-8 pb-5 justify-between'>
+          <div className='content-center'>
+            <span
+              className='text-base-text
+                  text-roboto-text-xs md:text-roboto-text-s l:text-roboto-text-m'
+            >
+              R$
+            </span>
+            <NumericFormat
+              value={price}
+              displayType={'text'}
+              allowNegative={false}
+              allowLeadingZeros
+              thousandSeparator='.'
+              decimalScale={2}
+              decimalSeparator=','
+              fixedDecimalScale
+              className='text-base-text text-baloo2-title-m md:text-baloo2-title-s l:text-baloo2-title-m'
             />
-          </ButtonContainer>
+          </div>
+          <div className='flex flex-row gap-2'>
+            <div className='shrink-0 content-center rounded-md bg-base-button'>
+              <button
+                className='text-center w-5 text-purple-dark text-roboto-text-button-g'
+                type='button'
+                onClick={() =>
+                  actualStock > 0 && setActualStock(actualStock - 1)
+                }
+                disabled={actualStock === 0}
+              >
+                -
+              </button>
+              <input
+                className='text-center bg-base-button bg-transparent text-roboto-text-s
+                  w-12 md:w-6'
+                id={`${title}quantity`}
+                type='number'
+                min={0}
+                max={maximumStock}
+                readOnly
+                value={actualStock}
+                placeholder='0'
+                step={1}
+              />
+              <button
+                className='text-center w-5 text-purple-dark text-roboto-text-button-g'
+                type='button'
+                onClick={() =>
+                  actualStock <= maximumStock && setActualStock(actualStock + 1)
+                }
+                disabled={actualStock > maximumStock}
+              >
+                +
+              </button>
+            </div>
+            <ButtonContainer
+              className='shrink-0'
+              color='background'
+              $backgroundColor='purpleDark'
+              $iconType='square'
+            >
+              <ShoppingCart
+                size={24}
+                weight='fill'
+                className='bg-purple-dark'
+                alt='Ícone de carrinho de compras na cor branca e fundo marrom escuro'
+              />
+            </ButtonContainer>
+          </div>
         </div>
       </div>
     </div>
