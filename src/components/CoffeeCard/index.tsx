@@ -62,7 +62,8 @@ export function CoffeeCard({
   return (
     <div
       {...props}
-      className='flex flex-col w-64 bg-base-card rounded-tr-[32px] rounded-bl-[32px]'
+      className='flex flex-col w-64 bg-base-card rounded-tr-[32px] rounded-bl-[32px] mb-8
+      '
     >
       <div className='relative -top-6 flex justify-center'>
         <img src={COFFEES[image]} alt={alt} />
@@ -93,7 +94,7 @@ export function CoffeeCard({
           {changeCase.sentenceCase(subTitle)}
         </p>
 
-        <div className='flex flex-row flex-wrap pt-8 pb-5 justify-between'>
+        <div className='flex flex-row flex-wrap pt-8 pb-5 mx-3 justify-between'>
           <div className='content-center'>
             <span
               className='text-base-text
@@ -116,7 +117,7 @@ export function CoffeeCard({
           <div className='flex flex-row gap-2'>
             <div className='shrink-0 content-center rounded-md bg-base-button'>
               <button
-                className='text-center w-5 text-purple-dark text-roboto-text-button-g'
+                className='text-center w-6 text-purple-dark text-roboto-text-button-g'
                 type='button'
                 onClick={() =>
                   actualStock > 0 && setActualStock(actualStock - 1)
@@ -126,7 +127,7 @@ export function CoffeeCard({
                 -
               </button>
               <input
-                className='text-center bg-base-button bg-transparent text-roboto-text-s
+                className='bg-base-button bg-transparent text-roboto-text-s text-center
                   w-12 md:w-6'
                 id={`${title}quantity`}
                 type='number'
@@ -138,7 +139,7 @@ export function CoffeeCard({
                 step={1}
               />
               <button
-                className='text-center w-5 text-purple-dark text-roboto-text-button-g'
+                className='text-center w-6 text-purple-dark text-roboto-text-button-g'
                 type='button'
                 onClick={() =>
                   actualStock <= maximumStock && setActualStock(actualStock + 1)
@@ -149,13 +150,12 @@ export function CoffeeCard({
               </button>
             </div>
             <ButtonContainer
-              className='shrink-0'
               color='background'
               $backgroundColor='purpleDark'
               $iconType='square'
             >
               <ShoppingCart
-                size={24}
+                size={22}
                 weight='fill'
                 className='bg-purple-dark'
                 alt='Ícone de carrinho de compras na cor branca e fundo marrom escuro'
