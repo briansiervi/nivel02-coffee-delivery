@@ -1,0 +1,58 @@
+import type { CoffeeCardProps } from '../components/CoffeeCard'
+
+export const CoffeeCards: CoffeeCardProps[] = [
+  {
+    title: 'expresso tradicional',
+    subTitle: 'o tradicional café feito com água quente e grãos moídos',
+    price: 9.9,
+    image: 'traditionalEspresso',
+    tagNames: ['tradicional'],
+    alt: 'imagem de um grande copo de café branco, com uma tampa preta e um adesivo também preto, descrito "Coffee delivery", com o logotipo do site',
+    maximumStock: 99,
+  },
+  {
+    title: 'expresso americano',
+    subTitle: 'expresso diluído, menos intenso que o tradicional',
+    price: 9.9,
+    image: 'americanEspresso',
+    tagNames: ['tradicional'],
+    alt: '',
+    maximumStock: 99,
+  },
+  {
+    title: 'expresso cremoso',
+    subTitle: 'café expresso tradicional com espuma cremosa',
+    price: 9.9,
+    image: 'creamyEspresso',
+    tagNames: ['tradicional'],
+    alt: '',
+    maximumStock: 99,
+  },
+  {
+    title: 'expresso gelado',
+    subTitle: 'bebida preparada com café expresso e cubos de gelo',
+    price: 9.9,
+    image: 'icedEspresso',
+    tagNames: ['tradicional'],
+    alt: '',
+    maximumStock: 99,
+  },
+  {
+    title: 'café com leite',
+    subTitle: 'meio a meio de expresso tradicional com leite vaporizado',
+    price: 9.9,
+    image: 'coffeeWithMilk',
+    tagNames: ['tradicional', 'com leite'],
+    alt: '',
+    maximumStock: 99,
+  },
+  {
+    title: 'latte',
+    subTitle: 'uma dose de café expresso com o dobro de leite e espuma cremosa',
+    price: 9.9,
+    image: 'latte',
+    tagNames: ['tradicional', 'com leite'],
+    alt: '',
+    maximumStock: 99,
+  },
+]

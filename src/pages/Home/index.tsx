@@ -2,8 +2,11 @@ import { Clock, Coffee, Package, ShoppingCart } from '@phosphor-icons/react'
 import BigCoffee from '../../assets/big-coffee.svg'
 import { ButtonContainer } from '../../components/IconButton/styles'
 import { CoffeeCard } from '../../components/CoffeeCard'
+import { CoffeeCards } from '../../Mocks/CoffeeCards'
 
 export function Home() {
+  const Coffees = CoffeeCards
+
   return (
     <div>
       <div className='flex flex-row gap-4 md:gap-8 l:gap-14'>
@@ -108,42 +111,20 @@ export function Home() {
           className='mt-14 flex flex-row flex-wrap justify-center md:justify-start
             gap-2 md:gap-4 l:gap-6 xl:gap-8'
         >
-          <CoffeeCard
-            title='expresso tradicional'
-            subTitle='o tradicional café feito com água quente e grãos moídos'
-            price={9.9}
-            image={'traditionalEspresso'}
-            tagNames={['tradicional']}
-            alt='imagem de um grande copo de café branco, com uma tampa preta e um adesivo também preto, descrito "Coffee delivery", com o logotipo do site'
-            maximumStock={99}
-          />
-          <CoffeeCard
-            title='expresso americano'
-            subTitle='expresso diluído, menos intenso que o tradicional'
-            price={9.9}
-            image={'americanEspresso'}
-            tagNames={['tradicional']}
-            alt=''
-            maximumStock={99}
-          />
-          <CoffeeCard
-            title='expresso cremoso'
-            subTitle='café expresso tradicional com espuma cremosa'
-            price={9.9}
-            image={'creamyEspresso'}
-            tagNames={['tradicional']}
-            alt=''
-            maximumStock={99}
-          />
-          <CoffeeCard
-            title='expresso gelado'
-            subTitle='bebida preparada com café expresso e cubos de gelo'
-            price={9.9}
-            image={'icedEspresso'}
-            tagNames={['tradicional']}
-            alt=''
-            maximumStock={99}
-          />
+          {Coffees.map(c => {
+            return (
+              <CoffeeCard
+                key={c.title}
+                title={c.title}
+                subTitle={c.subTitle}
+                price={c.price}
+                image={c.image}
+                tagNames={c.tagNames}
+                alt={c.alt}
+                maximumStock={c.maximumStock}
+              />
+            )
+          })}
         </div>
       </div>
     </div>

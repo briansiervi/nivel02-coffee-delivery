@@ -42,7 +42,7 @@ export interface CoffeeCardProps extends React.HTMLAttributes<HTMLDivElement> {
   subTitle: string
   price: number
   image: keyof typeof COFFEES
-  tagNames: [TAGNAME]
+  tagNames: TAGNAME[]
   alt: string
   maximumStock: number
 }
