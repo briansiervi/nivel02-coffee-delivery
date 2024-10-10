@@ -7,7 +7,7 @@ import { BrowserRouter } from 'react-router-dom'
 export function App() {
   return (
     <ThemeProvider theme={defaultTheme}>
-      <BrowserRouter>
+      <BrowserRouter basename='/nivel02-coffee-delivery'>
         <Router />
       </BrowserRouter>
       <GlobalStyle />
