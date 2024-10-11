@@ -111,9 +111,9 @@ Error generating stack: `+o.message+`
   background-color: ${e=>e.theme[Ai[e.$backgroundColor]]};
   border: none;
   border-radius: ${e=>e.$iconType==="square"?"0.375rem":"50%"};
-  width: ${e=>e.$iconType==="square"?"1.375rem":"2rem"};
-  height: ${e=>e.$iconType==="square"?"1.375rem":"2rem"};
-  /* margin: 0.5rem; */
+  width: ${e=>e.$iconType==="square"?"2.375rem":"2rem"};
+  height: ${e=>e.$iconType==="square"?"2.375rem":"2rem"};
+  padding: 0.5rem;
 
   span {
     display:flex;
@@ -176,4 +176,4 @@ Error generating stack: `+o.message+`
   background-color: ${e=>e.theme["purple-light"]};
   border: none;
   border-radius: 0.375rem;
-`;function yy({location:e}){return R.jsxs(gy,{children:[R.jsx(z0,{size:22,color:w0.purple,weight:"fill",className:"bg-purple-light"}),R.jsx("span",{className:"bg-purple-light",children:e})]})}function wy({location:e}){return R.jsxs(my,{children:[R.jsx("img",{src:hy,alt:"Logo do site coffee delivery, representado por um copo de café roxo, com um foguete branco ao centro, indo em direção ao céu."}),R.jsxs("nav",{children:[R.jsx(yy,{location:e}),R.jsx(vy,{quantity:3})]})]})}function Sy(){return R.jsxs(py,{className:"px-4",children:[R.jsx(wy,{location:"Porto Alegre, RS"}),R.jsx(xv,{})]})}function xy(){return R.jsx(kv,{children:R.jsxs(Nr,{path:"/",element:R.jsx(Sy,{}),children:[R.jsx(Nr,{path:"/",element:R.jsx(cy,{})}),R.jsx(Nr,{path:"/checkout",element:R.jsx(fy,{})}),R.jsx(Nr,{path:"/success",element:R.jsx(dy,{})})]})})}function Ey(){return R.jsxs(_h,{theme:w0,children:[R.jsx(_v,{basename:"/nivel02-coffee-delivery",children:R.jsx(xy,{})}),R.jsx(Lh,{})]})}Qd(document.getElementById("root")).render(R.jsx($.StrictMode,{children:R.jsx(Ey,{})}));
+`;function yy({location:e}){return R.jsxs(gy,{children:[R.jsx(z0,{size:22,color:w0.purple,weight:"fill",className:"bg-purple-light"}),R.jsx("span",{className:"bg-purple-light",children:e})]})}function wy({location:e}){return R.jsxs(my,{className:"sticky top-0 bg-background",children:[R.jsx("img",{src:hy,alt:"Logo do site coffee delivery, representado por um copo de café roxo, com um foguete branco ao centro, indo em direção ao céu."}),R.jsxs("nav",{children:[R.jsx(yy,{location:e}),R.jsx(vy,{quantity:3})]})]})}function Sy(){return R.jsxs(py,{className:"px-4 max-w-[1152px]",children:[R.jsx(wy,{location:"Porto Alegre, RS"}),R.jsx(xv,{})]})}function xy(){return R.jsx(kv,{children:R.jsxs(Nr,{path:"/",element:R.jsx(Sy,{}),children:[R.jsx(Nr,{path:"/",element:R.jsx(cy,{})}),R.jsx(Nr,{path:"/checkout",element:R.jsx(fy,{})}),R.jsx(Nr,{path:"/success",element:R.jsx(dy,{})})]})})}function Ey(){return R.jsxs(_h,{theme:w0,children:[R.jsx(_v,{basename:"/nivel02-coffee-delivery",children:R.jsx(xy,{})}),R.jsx(Lh,{})]})}Qd(document.getElementById("root")).render(R.jsx($.StrictMode,{children:R.jsx(Ey,{})}));
