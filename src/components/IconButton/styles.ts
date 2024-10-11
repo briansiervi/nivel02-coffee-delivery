@@ -34,9 +34,9 @@ export const ButtonContainer = styled.button<IconButtonProps>`
   background-color: ${props => props.theme[COLORS[props.$backgroundColor]]};
   border: none;
   border-radius: ${props => (props.$iconType === 'square' ? '0.375rem' : '50%')};
-  width: ${props => (props.$iconType === 'square' ? '1.375rem' : '2rem')};
-  height: ${props => (props.$iconType === 'square' ? '1.375rem' : '2rem')};
-  /* margin: 0.5rem; */
+  width: ${props => (props.$iconType === 'square' ? '2.375rem' : '2rem')};
+  height: ${props => (props.$iconType === 'square' ? '2.375rem' : '2rem')};
+  padding: 0.5rem;
 
   span {
     display:flex;
