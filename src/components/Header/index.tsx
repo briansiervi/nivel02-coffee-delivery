@@ -6,7 +6,7 @@ import { Location } from '../Location'
 
 export function Header({ location }: LocationProps) {
   return (
-    <HeaderContainer>
+    <HeaderContainer className='sticky top-0 bg-background'>
       <img
         src={logo}
         alt='Logo do site coffee delivery, representado por um copo de café roxo, com um foguete branco ao centro, indo em direção ao céu.'
