@@ -8,6 +8,7 @@ interface locationProps {
   longitude: number
   language: 'pt'
   city?: string | null
+  state?: string | null
 }
 
 export function Location() {
@@ -27,6 +28,7 @@ export function Location() {
         longitude: longitude,
         language: 'pt',
         city: null,
+        state: null,
       }
 
       setCoordinates(point)
@@ -39,21 +41,30 @@ export function Location() {
         `https://api-bdc.net/data/reverse-geocode-client?${coordinates.latitude}&longitude=${coordinates.longitude}&localityLanguage=${coordinates.language}`
       ).then(promise => {
         promise.json().then(res => {
-          console.log(res)
+          const state = res.localityInfo.administrative
+            .filter(
+              (x: { name: string; isoCode: string }) =>
+                x.name === res.locality && x.isoCode !== undefined
+            )[0]
+            .isoCode.substring(3, 5)
 
           const location: locationProps = {
             latitude: coordinates.latitude,
             longitude: coordinates.longitude,
             language: 'pt',
             city: res.locality,
+            state: state.toUpperCase(),
           }
 
-          console.log(location)
           setCity(location)
         })
       })
     }
   }, [coordinates])
+
+  const mapClassName = city
+    ? 'bg-purple-light'
+    : 'bg-purple-light animate-bounce w-5 h-5'
 
   return (
     <LocationContainer onClick={() => getUserLocation()}>
@@ -61,10 +72,14 @@ export function Location() {
         size={22}
         color={defaultTheme.purple}
         weight='fill'
-        className='bg-purple-light'
+        className={mapClassName}
       />
 
-      {city && <span className='bg-purple-light'>{city.city}</span>}
+      {city && (
+        <span className='bg-purple-light'>
+          {city.city}, {city.state}
+        </span>
+      )}
     </LocationContainer>
   )
 }
