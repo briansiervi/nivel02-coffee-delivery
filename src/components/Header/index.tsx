@@ -1,6 +1,6 @@
 import { HeaderContainer } from './styles'
 import logo from '../../assets/logo.svg'
-import { IconButton } from '../IconButton'
+import { IconButton } from '../ButtonContainer'
 import { Location } from '../Location'
 import { useNavigate } from 'react-router-dom'
 

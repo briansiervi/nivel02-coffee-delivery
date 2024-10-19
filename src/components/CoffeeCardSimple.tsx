@@ -1,5 +1,5 @@
 import * as changeCase from 'change-case'
-import { COFFEES, type CoffeeProps } from '../Coffee'
+import { COFFEES, type CoffeeProps } from './Coffee'
 
 interface CoffeeCardSimpleProps {
   item: CoffeeProps

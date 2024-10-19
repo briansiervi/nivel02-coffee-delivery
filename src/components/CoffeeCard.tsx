@@ -1,9 +1,9 @@
 import * as changeCase from 'change-case'
 import { ShoppingCart } from '@phosphor-icons/react'
-import { ButtonContainer } from '../IconButton/styles'
+import { ButtonContainer } from './ButtonContainer/styles'
 import { NumericFormat } from 'react-number-format'
 import { useState } from 'react'
-import { type CoffeeProps, COFFEES } from '../Coffee'
+import { type CoffeeProps, COFFEES } from './Coffee'
 
 interface CoffeeCardProps {
   item: CoffeeProps
