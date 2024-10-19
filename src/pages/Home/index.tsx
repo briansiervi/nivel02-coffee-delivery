@@ -22,7 +22,7 @@ export function Home() {
             hora
           </span>
           <div
-            className='flex flex-row flex-wrap text-roboto-text-tag gap-4
+            className='grid gap-4 grid-cols-1 md:grid-cols-2 text-roboto-text-tag
               mt-4 s:mt-8 md:mt-8 l:mt-16
               mb-8 s:mb-14 md:mb-20 l:mb-28
             '
@@ -43,6 +43,22 @@ export function Home() {
               </ButtonContainer>
               <p className='content-center'>Compra simples e segura</p>
             </div>
+            <div className='flex flex-row gap-3 min-w-40'>
+              <ButtonContainer
+                type='button'
+                color={'white'}
+                $backgroundColor={'yellow'}
+                $iconType={'circle'}
+              >
+                <Clock
+                  size={16}
+                  weight='fill'
+                  className='bg-yellow'
+                  alt='Ícone de caixa de relógio na cor branca e fundo laranja claro'
+                />
+              </ButtonContainer>
+              <p className='content-center'>Entrega rápida e rastreada</p>
+            </div>
             <div className='flex flex-row gap-3 '>
               <ButtonContainer
                 type='button'
@@ -58,22 +74,6 @@ export function Home() {
                 />
               </ButtonContainer>
               <p className='content-center'>Embalagem mantém o café intacto</p>
-            </div>
-            <div className='flex flex-row gap-3  min-w-40'>
-              <ButtonContainer
-                type='button'
-                color={'white'}
-                $backgroundColor={'yellow'}
-                $iconType={'circle'}
-              >
-                <Clock
-                  size={16}
-                  weight='fill'
-                  className='bg-yellow'
-                  alt='Ícone de caixa de relógio na cor branca e fundo laranja claro'
-                />
-              </ButtonContainer>
-              <p className='content-center'>Entrega rápida e rastreada</p>
             </div>
             <div className='flex flex-row gap-3 '>
               <ButtonContainer
