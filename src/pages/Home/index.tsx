@@ -100,7 +100,7 @@ export function Home() {
           />
         </div>
       </div>
-      <div>
+      <div className='flex flex-col'>
         <span
           className='font-baloo2 text-base-subtitle mt-8
             text-baloo2-title-xs md:text-baloo2-title-m l:text-baloo2-title-m xl:text-baloo2-title-l'
