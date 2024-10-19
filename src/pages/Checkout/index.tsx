@@ -40,7 +40,7 @@ export function Checkout() {
         <div className='bg-base-card rounded-md mt-4'>
           <form className='p-10'>
             {coffees.map(coffee => {
-              return <CoffeeCardSimple key={coffee.id} id={coffee.id} />
+              return <CoffeeCardSimple key={coffee.id} item={coffee} />
             })}
 
             <div className='grid grid-cols-2 gap-4'>

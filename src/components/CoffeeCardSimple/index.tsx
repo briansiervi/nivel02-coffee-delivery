@@ -1,19 +1,24 @@
 import * as changeCase from 'change-case'
-import { COFFEES } from '../CoffeeCard'
+import { COFFEES, type CoffeeProps } from '../Coffee'
 
 interface CoffeeCardSimpleProps {
-  id: string
+  item: CoffeeProps
 }
 
-export function CoffeeCardSimple({ id, ...props }: CoffeeCardSimpleProps) {
+export function CoffeeCardSimple({ item, ...props }: CoffeeCardSimpleProps) {
   return (
-    <div {...props}>
-      <p
-        className='pt-4 font-baloo2 text-base-title
-            text-baloo2-title-xs'
-      >
-        {/* {changeCase.capitalCase(title)} */}
-      </p>
+    <div {...props} className='flex flex-row justify-between'>
+      <div className='flex flex-row gap-4'>
+        <img src={COFFEES[item.image]} alt={item.alt} className='size-16' />
+        <div className='flex flex-col'>
+          <div>{changeCase.capitalCase(item.title)}</div>
+          <div className='flex flex-row gap-2'>
+            <div>-1+</div>
+            <div>Remover</div>
+          </div>
+        </div>
+      </div>
+      <div>R$ 9,90</div>
     </div>
   )
 }

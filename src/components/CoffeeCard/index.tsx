@@ -1,63 +1,15 @@
 import * as changeCase from 'change-case'
 import { ShoppingCart } from '@phosphor-icons/react'
 import { ButtonContainer } from '../IconButton/styles'
-import TraditionalEspresso from '../../assets/traditional-espresso.svg'
-import AmericanEspresso from '../../assets/american-espresso.svg'
-import CreamyEspresso from '../../assets/creamy-espresso.svg'
-import IcedEspresso from '../../assets/iced-espresso.svg'
-import CoffeeWithMilk from '../../assets/coffee-with-milk.svg'
-import Latte from '../../assets/latte.svg'
-import Cappuccino from '../../assets/cappuccino.svg'
-import Macchiato from '../../assets/macchiato.svg'
-import Mocaccino from '../../assets/mocaccino.svg'
-import HotChocolate from '../../assets/hot-chocolate.svg'
-import Cuban from '../../assets/cuban.svg'
-import Hawaiian from '../../assets/hawaiian.svg'
-import Arabic from '../../assets/arabic.svg'
-import Irish from '../../assets/irish.svg'
 import { NumericFormat } from 'react-number-format'
 import { useState } from 'react'
+import { type CoffeeProps, COFFEES } from '../Coffee'
 
-export const COFFEES = {
-  traditionalEspresso: TraditionalEspresso,
-  americanEspresso: AmericanEspresso,
-  creamyEspresso: CreamyEspresso,
-  icedEspresso: IcedEspresso,
-  coffeeWithMilk: CoffeeWithMilk,
-  latte: Latte,
-  cappuccino: Cappuccino,
-  macchiato: Macchiato,
-  mocaccino: Mocaccino,
-  hotChocolate: HotChocolate,
-  cuban: Cuban,
-  hawaiian: Hawaiian,
-  arabic: Arabic,
-  irish: Irish,
+interface CoffeeCardProps {
+  item: CoffeeProps
 }
 
-type TAGNAME = 'tradicional' | 'gelado' | 'com leite' | 'especial' | 'alcoólico'
-
-export interface CoffeeCardProps extends React.HTMLAttributes<HTMLDivElement> {
-  id: string
-  title: string
-  subTitle: string
-  price: number
-  image: keyof typeof COFFEES
-  tagNames: TAGNAME[]
-  alt: string
-  maximumStock: number
-}
-
-export function CoffeeCard({
-  title,
-  subTitle,
-  price,
-  image,
-  tagNames,
-  alt,
-  maximumStock,
-  ...props
-}: CoffeeCardProps) {
+export function CoffeeCard({ item, ...props }: CoffeeCardProps) {
   const [actualStock, setActualStock] = useState(0)
 
   return (
@@ -67,12 +19,12 @@ export function CoffeeCard({
       '
     >
       <div className='relative -top-6 flex justify-center'>
-        <img src={COFFEES[image]} alt={alt} />
+        <img src={COFFEES[item.image]} alt={item.alt} />
       </div>
 
       <div className='flex flex-col text-center px-2'>
         <div className='flex flew-row gap-1 justify-center'>
-          {tagNames.map(tagName => (
+          {item.tagNames.map(tagName => (
             <span
               className='bg-yellow-light text-yellow-dark text-roboto-text-tag px-2 py-1 rounded-lg'
               key={tagName}
@@ -82,17 +34,17 @@ export function CoffeeCard({
           ))}
         </div>
         <label
-          htmlFor={`${title}quantity`}
+          htmlFor={`${item.title}quantity`}
           className='pt-4 font-baloo2 text-base-title
             text-baloo2-title-xs'
         >
-          {changeCase.capitalCase(title)}
+          {changeCase.capitalCase(item.title)}
         </label>
         <p
           className='pt-2 text-base-label
           font-roboto text-roboto-text-xs md:text-roboto-text-s'
         >
-          {changeCase.sentenceCase(subTitle)}
+          {changeCase.sentenceCase(item.subTitle)}
         </p>
 
         <div className='flex flex-row flex-wrap pt-8 pb-5 mx-3 justify-between'>
@@ -104,7 +56,7 @@ export function CoffeeCard({
               R$
             </span>
             <NumericFormat
-              value={price}
+              value={item.price}
               displayType={'text'}
               allowNegative={false}
               allowLeadingZeros
@@ -130,10 +82,10 @@ export function CoffeeCard({
               <input
                 className='bg-base-button bg-transparent text-roboto-text-s text-center
                   w-12 md:w-6'
-                id={`${title}quantity`}
+                id={`${item.title}quantity`}
                 type='number'
                 min={0}
-                max={maximumStock}
+                max={item.maximumStock}
                 readOnly
                 value={actualStock}
                 placeholder='0'
@@ -143,9 +95,10 @@ export function CoffeeCard({
                 className='text-center w-6 text-purple-dark text-roboto-text-button-g'
                 type='button'
                 onClick={() =>
-                  actualStock <= maximumStock && setActualStock(actualStock + 1)
+                  actualStock <= item.maximumStock &&
+                  setActualStock(actualStock + 1)
                 }
-                disabled={actualStock > maximumStock}
+                disabled={actualStock > item.maximumStock}
               >
                 +
               </button>

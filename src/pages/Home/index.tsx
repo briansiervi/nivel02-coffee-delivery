@@ -111,20 +111,8 @@ export function Home() {
           className='mt-14 flex flex-row flex-wrap justify-center md:justify-start
             gap-2 md:gap-4 l:gap-6 xl:gap-8'
         >
-          {coffees.map(c => {
-            return (
-              <CoffeeCard
-                id={c.id}
-                key={c.title}
-                title={c.title}
-                subTitle={c.subTitle}
-                price={c.price}
-                image={c.image}
-                tagNames={c.tagNames}
-                alt={c.alt}
-                maximumStock={c.maximumStock}
-              />
-            )
+          {coffees.map(coffee => {
+            return <CoffeeCard key={coffee.title} item={coffee} />
           })}
         </div>
       </div>
