@@ -18,7 +18,7 @@ import Irish from '../../assets/irish.svg'
 import { NumericFormat } from 'react-number-format'
 import { useState } from 'react'
 
-const COFFEES = {
+export const COFFEES = {
   traditionalEspresso: TraditionalEspresso,
   americanEspresso: AmericanEspresso,
   creamyEspresso: CreamyEspresso,
@@ -38,6 +38,7 @@ const COFFEES = {
 type TAGNAME = 'tradicional' | 'gelado' | 'com leite' | 'especial' | 'alcoólico'
 
 export interface CoffeeCardProps extends React.HTMLAttributes<HTMLDivElement> {
+  id: string
   title: string
   subTitle: string
   price: number

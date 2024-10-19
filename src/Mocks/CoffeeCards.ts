@@ -2,6 +2,7 @@ import type { CoffeeCardProps } from '../components/CoffeeCard'
 
 export const CoffeeCards: CoffeeCardProps[] = [
   {
+    id: 1,
     title: 'expresso tradicional',
     subTitle: 'o tradicional café feito com água quente e grãos moídos',
     price: 9.9,
@@ -11,6 +12,7 @@ export const CoffeeCards: CoffeeCardProps[] = [
     maximumStock: 99,
   },
   {
+    id: 2,
     title: 'expresso americano',
     subTitle: 'expresso diluído, menos intenso que o tradicional',
     price: 9.9,
@@ -20,6 +22,7 @@ export const CoffeeCards: CoffeeCardProps[] = [
     maximumStock: 99,
   },
   {
+    id: 3,
     title: 'expresso cremoso',
     subTitle: 'café expresso tradicional com espuma cremosa',
     price: 9.9,
@@ -29,6 +32,7 @@ export const CoffeeCards: CoffeeCardProps[] = [
     maximumStock: 99,
   },
   {
+    id: 4,
     title: 'expresso gelado',
     subTitle: 'bebida preparada com café expresso e cubos de gelo',
     price: 9.9,
@@ -38,6 +42,7 @@ export const CoffeeCards: CoffeeCardProps[] = [
     maximumStock: 99,
   },
   {
+    id: 5,
     title: 'café com leite',
     subTitle: 'meio a meio de expresso tradicional com leite vaporizado',
     price: 9.9,
@@ -47,6 +52,7 @@ export const CoffeeCards: CoffeeCardProps[] = [
     maximumStock: 99,
   },
   {
+    id: 6,
     title: 'latte',
     subTitle: 'uma dose de café expresso com o dobro de leite e espuma cremosa',
     price: 9.9,
@@ -56,6 +62,7 @@ export const CoffeeCards: CoffeeCardProps[] = [
     maximumStock: 99,
   },
   {
+    id: 7,
     title: 'cappuccino',
     subTitle: 'bebida com canela feita de doses iguais de café, leite e espuma',
     price: 9.9,
@@ -65,6 +72,7 @@ export const CoffeeCards: CoffeeCardProps[] = [
     maximumStock: 99,
   },
   {
+    id: 8,
     title: 'macchiato',
     subTitle: 'café expresso misturado com um pouco de leite quente e espuma',
     price: 9.9,
@@ -74,6 +82,7 @@ export const CoffeeCards: CoffeeCardProps[] = [
     maximumStock: 99,
   },
   {
+    id: 9,
     title: 'mocaccino',
     subTitle: 'café expresso com calda de chocolate pouco leite e espuma',
     price: 9.9,
@@ -83,6 +92,7 @@ export const CoffeeCards: CoffeeCardProps[] = [
     maximumStock: 99,
   },
   {
+    id: 10,
     title: 'chocolate quente',
     subTitle: 'bebida feita com chocolate dissolvido no leite quente e café',
     price: 9.9,
@@ -92,6 +102,7 @@ export const CoffeeCards: CoffeeCardProps[] = [
     maximumStock: 99,
   },
   {
+    id: 11,
     title: 'cubano',
     subTitle: 'drink gelado de café expresso com rum, creme de leite e hortelã',
     price: 9.9,
@@ -101,6 +112,7 @@ export const CoffeeCards: CoffeeCardProps[] = [
     maximumStock: 99,
   },
   {
+    id: 12,
     title: 'havaiano',
     subTitle: 'bebida adocicada preparada com café e leite de coco',
     price: 9.9,
@@ -110,6 +122,7 @@ export const CoffeeCards: CoffeeCardProps[] = [
     maximumStock: 99,
   },
   {
+    id: 13,
     title: 'árabe',
     subTitle: 'bebida preparada com grãos de café árabe e especiarias',
     price: 9.9,
@@ -119,6 +132,7 @@ export const CoffeeCards: CoffeeCardProps[] = [
     maximumStock: 99,
   },
   {
+    id: 14,
     title: 'irlandês',
     subTitle: 'bebida a base de café, uísque irlandês, açúcar e chantilly',
     price: 9.9,
