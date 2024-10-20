@@ -1,5 +1,5 @@
 import { CoffeeCardSimple } from '../components/CoffeeCardSimple'
-import { CoffeeCards } from '../Mocks/CoffeeCards'
+import { CoffeeCards } from '../mocks/CoffeeCards'
 
 export function Checkout() {
   const coffees = CoffeeCards.slice(0, 2)

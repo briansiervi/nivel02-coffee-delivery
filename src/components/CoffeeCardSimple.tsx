@@ -1,5 +1,7 @@
 import * as changeCase from 'change-case'
 import { COFFEES, type CoffeeProps } from './Coffee'
+import { Trash } from '@phosphor-icons/react'
+import { defaultTheme } from '../styles/themes/default'
 
 interface CoffeeCardSimpleProps {
   item: CoffeeProps
@@ -14,7 +16,21 @@ export function CoffeeCardSimple({ item, ...props }: CoffeeCardSimpleProps) {
           <div>{changeCase.capitalCase(item.title)}</div>
           <div className='flex flex-row gap-2'>
             <div>-1+</div>
-            <div>Remover</div>
+            <button
+              type='button'
+              className='bg-base-button rounded-md p-1 flex items-stretch'
+            >
+              <Trash
+                size={16}
+                weight='light'
+                color={defaultTheme.purple}
+                className='self-center'
+                alt='Ícone de carrinho de compras na cor marrom escuro e fundo marrom claro, com número indicativo de quantos produtos foram selecionados ao lado superior direito.'
+              />
+              <p className='text-base-text font-roboto text-roboto-text-button-m'>
+                {changeCase.constantCase('Remover')}
+              </p>
+            </button>
           </div>
         </div>
       </div>

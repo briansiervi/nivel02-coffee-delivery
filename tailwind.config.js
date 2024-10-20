@@ -80,7 +80,7 @@ export default {
           '10px',
           {
             lineHeight: '130%',
-            fontWeight: '400',
+            fontWeight: '700',
           },
         ],
         'roboto-text-button-g': [

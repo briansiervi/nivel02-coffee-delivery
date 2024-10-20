@@ -2,7 +2,7 @@ import { Clock, Coffee, Package, ShoppingCart } from '@phosphor-icons/react'
 import BigCoffee from '../assets/big-coffee.svg'
 import { ButtonContainer } from '../components/ButtonContainer/styles'
 import { CoffeeCard } from '../components/CoffeeCard'
-import { CoffeeCards } from '../Mocks/CoffeeCards'
+import { CoffeeCards } from '../mocks/CoffeeCards'
 
 export function Home() {
   const coffees = CoffeeCards
