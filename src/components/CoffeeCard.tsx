@@ -2,16 +2,14 @@ import * as changeCase from 'change-case'
 import { ShoppingCart } from '@phosphor-icons/react'
 import { ButtonContainer } from './ButtonContainer/styles'
 import { NumericFormat } from 'react-number-format'
-import { useState } from 'react'
 import { type CoffeeProps, COFFEES } from './Coffee'
+import { IncrementButton } from './IncrementButton'
 
 interface CoffeeCardProps {
   item: CoffeeProps
 }
 
 export function CoffeeCard({ item, ...props }: CoffeeCardProps) {
-  const [actualStock, setActualStock] = useState(0)
-
   return (
     <div
       {...props}
@@ -68,41 +66,7 @@ export function CoffeeCard({ item, ...props }: CoffeeCardProps) {
             />
           </div>
           <div className='flex flex-row gap-2'>
-            <div className='shrink-0 content-center rounded-md bg-base-button'>
-              <button
-                className='text-center w-6 text-purple-dark text-roboto-text-button-g'
-                type='button'
-                onClick={() =>
-                  actualStock > 0 && setActualStock(actualStock - 1)
-                }
-                disabled={actualStock === 0}
-              >
-                -
-              </button>
-              <input
-                className='bg-base-button bg-transparent text-roboto-text-s text-center
-                  w-12 md:w-6'
-                id={`${item.title}quantity`}
-                type='number'
-                min={0}
-                max={item.maximumStock}
-                readOnly
-                value={actualStock}
-                placeholder='0'
-                step={1}
-              />
-              <button
-                className='text-center w-6 text-purple-dark text-roboto-text-button-g'
-                type='button'
-                onClick={() =>
-                  actualStock <= item.maximumStock &&
-                  setActualStock(actualStock + 1)
-                }
-                disabled={actualStock > item.maximumStock}
-              >
-                +
-              </button>
-            </div>
+            <IncrementButton id={item.id} maximumStock={item.maximumStock} />
             <ButtonContainer
               color='background'
               $backgroundColor='purpleDark'

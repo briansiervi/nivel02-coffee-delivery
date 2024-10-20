@@ -2,6 +2,7 @@ import * as changeCase from 'change-case'
 import { COFFEES, type CoffeeProps } from './Coffee'
 import { Trash } from '@phosphor-icons/react'
 import { defaultTheme } from '../styles/themes/default'
+import { IncrementButton } from './IncrementButton'
 
 interface CoffeeCardSimpleProps {
   item: CoffeeProps
@@ -15,7 +16,7 @@ export function CoffeeCardSimple({ item, ...props }: CoffeeCardSimpleProps) {
         <div className='flex flex-col'>
           <div>{changeCase.capitalCase(item.title)}</div>
           <div className='flex flex-row gap-2'>
-            <div>-1+</div>
+            <IncrementButton id={item.id} maximumStock={item.maximumStock} />
             <button
               type='button'
               className='bg-base-button rounded-md p-1 flex items-stretch'
