@@ -10,17 +10,20 @@ interface CoffeeCardSimpleProps {
 
 export function CoffeeCardSimple({ item, ...props }: CoffeeCardSimpleProps) {
   return (
-    <div>
-      <div {...props} className='flex flex-row justify-between'>
+    <div {...props}>
+      <div className='flex flex-row justify-between'>
         <div className='flex flex-row gap-4'>
           <img src={COFFEES[item.image]} alt={item.alt} className='size-16' />
           <div className='flex flex-col'>
-            <div>{changeCase.capitalCase(item.title)}</div>
-            <div className='flex flex-row gap-2'>
+            <div className='text-roboto-text-m md:after:text-roboto-text-l'>
+              {changeCase.capitalCase(item.title)}
+            </div>
+
+            <div className='flex flex-row gap-2 mt-2'>
               <IncrementButton id={item.id} maximumStock={item.maximumStock} />
               <button
                 type='button'
-                className='bg-base-button rounded-md p-1 flex items-stretch'
+                className='bg-base-button rounded-md p-1 flex'
               >
                 <Trash
                   size={16}
@@ -36,7 +39,9 @@ export function CoffeeCardSimple({ item, ...props }: CoffeeCardSimpleProps) {
             </div>
           </div>
         </div>
-        <div>R$ 9,90</div>
+        <div className='text-roboto-text-m md:after:text-roboto-text-l font-bold'>
+          R$ 9,90
+        </div>
       </div>
       <hr className='my-3 md:my-6 h-px border-t-0 bg-transparent bg-gradient-to-r from-transparent via-neutral-500 to-transparent opacity-50 dark:via-neutral-400' />
     </div>

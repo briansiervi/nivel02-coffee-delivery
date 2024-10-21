@@ -9,7 +9,7 @@ export function IncrementButton({ id, maximumStock }: IncrementeButtonProps) {
   const [actualStock, setActualStock] = useState(0)
 
   return (
-    <div className='shrink-0 content-center rounded-md bg-base-button'>
+    <div className='content-center rounded-md bg-base-button'>
       <button
         className='text-center w-6 text-purple-dark text-roboto-text-button-g'
         type='button'
@@ -19,8 +19,7 @@ export function IncrementButton({ id, maximumStock }: IncrementeButtonProps) {
         -
       </button>
       <input
-        className='bg-base-button bg-transparent text-roboto-text-s text-center
-                  w-12 md:w-6'
+        className='bg-base-button bg-transparent text-roboto-text-s text-center w-12 md:w-6'
         id={id}
         type='number'
         min={0}

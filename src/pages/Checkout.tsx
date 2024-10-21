@@ -43,12 +43,21 @@ export function Checkout() {
               return <CoffeeCardSimple key={coffee.id} item={coffee} />
             })}
 
-            <div className='grid grid-cols-2 gap-4'>
-              <p>Total de itens</p>
-              <p>R$ 29,70</p>
+            <div className='flex flex-col'>
+              <div className='flex justify-between mt-3 text-roboto-text-s md:after:text-roboto-text-m'>
+                <p className='grow'>Total de itens</p>
+                <span>R$ 29,70</span>
+              </div>
 
-              <p>Entrega</p>
-              <p>R$ 29,70</p>
+              <div className='flex justify-between mt-3 text-roboto-text-s md:after:text-roboto-text-m'>
+                <p className='grow'>Entrega</p>
+                <span>R$ 3,50</span>
+              </div>
+
+              <div className='flex justify-between mt-3 text-base-subtitle text-roboto-text-m md:after:text-roboto-text-l font-bold'>
+                <p className='grow'>Total</p>
+                <span>R$ 33,20</span>
+              </div>
             </div>
           </form>
         </div>
