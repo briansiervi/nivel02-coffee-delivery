@@ -10,9 +10,11 @@ Esse projeto tem o intuito de demonstrar como gerenciar um carrinho de compras d
 <!-- ## [Projeto publicado]() -->
 
 ## Tecnologias
-Styled-components,
+Styled-components, Tailwindcss
 
 ## Material de apoio
 
 - [Deploy no github pages](https://www.youtube.com/watch?v=-weTjP3pYxs&t=427s&ab_channel=MatheusBattisti-HoradeCodar)
 - [Vite Deploy + Router ](https://www.youtube.com/watch?v=uStf2HMXcAs&ab_channel=VladyslavDihtiarenko)
+- Tailwindcss
+  - [Dividers](https://tw-elements.com/docs/standard/content-styles/dividers/)
