@@ -1,5 +1,6 @@
 import { CoffeeCardSimple } from '../components/CoffeeCardSimple'
 import { CoffeeCards } from '../mocks/CoffeeCards'
+import * as changeCase from 'change-case'
 
 export function Checkout() {
   const coffees = CoffeeCards.slice(0, 2)
@@ -40,24 +41,39 @@ export function Checkout() {
         <div className='bg-base-card rounded-md mt-4'>
           <form className='p-10'>
             {coffees.map(coffee => {
-              return <CoffeeCardSimple key={coffee.id} item={coffee} />
+              return (
+                <CoffeeCardSimple
+                  key={coffee.id}
+                  item={coffee}
+                  divider={true}
+                />
+              )
             })}
 
             <div className='flex flex-col'>
               <div className='flex justify-between mt-3 text-roboto-text-s md:after:text-roboto-text-m'>
-                <p className='grow'>Total de itens</p>
+                <p className='grow'>
+                  {changeCase.sentenceCase('total de itens')}
+                </p>
                 <span>R$ 29,70</span>
               </div>
 
               <div className='flex justify-between mt-3 text-roboto-text-s md:after:text-roboto-text-m'>
-                <p className='grow'>Entrega</p>
+                <p className='grow'>{changeCase.sentenceCase('entrega')}</p>
                 <span>R$ 3,50</span>
               </div>
 
               <div className='flex justify-between mt-3 text-base-subtitle text-roboto-text-m md:after:text-roboto-text-l font-bold'>
-                <p className='grow'>Total</p>
+                <p className='grow'>{changeCase.sentenceCase('total')}</p>
                 <span>R$ 33,20</span>
               </div>
+
+              <button
+                type='submit'
+                className='items-center bg-yellow mt-6 h-11 text-white font-bold'
+              >
+                {changeCase.constantCase('confirmar pedido').replace('_', ' ')}
+              </button>
             </div>
           </form>
         </div>

@@ -6,9 +6,14 @@ import { IncrementButton } from './IncrementButton'
 
 interface CoffeeCardSimpleProps {
   item: CoffeeProps
+  divider: boolean
 }
 
-export function CoffeeCardSimple({ item, ...props }: CoffeeCardSimpleProps) {
+export function CoffeeCardSimple({
+  item,
+  divider,
+  ...props
+}: CoffeeCardSimpleProps) {
   return (
     <div {...props}>
       <div className='flex flex-row justify-between'>
@@ -43,7 +48,9 @@ export function CoffeeCardSimple({ item, ...props }: CoffeeCardSimpleProps) {
           R$ 9,90
         </div>
       </div>
-      <hr className='my-3 md:my-6 h-px border-t-0 bg-transparent bg-gradient-to-r from-transparent via-neutral-500 to-transparent opacity-50 dark:via-neutral-400' />
+      {divider && (
+        <hr className='my-3 md:my-6 h-px border-t-0 bg-transparent bg-gradient-to-r from-transparent via-neutral-500 to-transparent opacity-50 dark:via-neutral-400' />
+      )}
     </div>
   )
 }
