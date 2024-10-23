@@ -1,12 +1,14 @@
 import { CoffeeCardSimple } from '../components/CoffeeCardSimple'
 import { CoffeeCards } from '../mocks/CoffeeCards'
 import * as changeCase from 'change-case'
+import { MapPinLine } from '@phosphor-icons/react'
+import { defaultTheme } from '../styles/themes/default'
 
 export function Checkout() {
   const coffees = CoffeeCards.slice(0, 2)
 
   return (
-    <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
+    <div className='grid grid-cols-1 md:grid-cols-2 gap-4 mb-10'>
       <div>
         <span
           className='font-baloo2 text-base-subtitle mt-8
@@ -16,9 +18,28 @@ export function Checkout() {
         </span>
 
         <div className='flex flex-col mt-4'>
-          <div className='bg-base-card rounded-md'>
-            <form className='p-10'>
-              <p>Endereço de Entrega</p>
+          <div className='bg-base-card rounded-md p-10'>
+            <div className='flex flex-row'>
+              <MapPinLine size={22} color={defaultTheme.yellow} />
+              <div>
+                <p className='text-base-text text-roboto-text-m'>
+                  {changeCase.sentenceCase('Endereço de Entrega')}
+                </p>
+                <p className='text-base-text text-roboto-text-s'>
+                  {changeCase.sentenceCase(
+                    'Informe o endereço onde deseja receber seu pedido'
+                  )}
+                </p>
+              </div>
+            </div>
+            <form className='mt-8'>
+              <input
+                type='number'
+                placeholder='CEP'
+                max={99999999}
+                min={0}
+                className='p-3 rounded-md'
+              />
             </form>
           </div>
 
