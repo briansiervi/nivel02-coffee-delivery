@@ -11,7 +11,7 @@ export function IncrementButton({ id, maximumStock }: IncrementeButtonProps) {
   return (
     <div className='content-center rounded-md bg-base-button'>
       <button
-        className='text-center w-6 text-purple-dark text-roboto-text-button-g'
+        className='text-center w-6 text-purple text-roboto-text-button-g'
         type='button'
         onClick={() => actualStock > 0 && setActualStock(actualStock - 1)}
         disabled={actualStock === 0}
@@ -30,7 +30,7 @@ export function IncrementButton({ id, maximumStock }: IncrementeButtonProps) {
         step={1}
       />
       <button
-        className='text-center w-6 text-purple-dark text-roboto-text-button-g'
+        className='text-center w-6 text-purple text-roboto-text-button-g'
         type='button'
         onClick={() =>
           actualStock <= maximumStock && setActualStock(actualStock + 1)

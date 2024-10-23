@@ -70,7 +70,7 @@ export function Checkout() {
 
               <button
                 type='submit'
-                className='items-center bg-yellow mt-6 h-11 text-white font-bold'
+                className='items-center bg-yellow mt-6 h-11 text-white font-bold rounded-md'
               >
                 {changeCase.constantCase('confirmar pedido').replace('_', ' ')}
               </button>
