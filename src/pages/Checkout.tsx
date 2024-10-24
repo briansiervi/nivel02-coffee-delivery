@@ -18,8 +18,8 @@ export function Checkout() {
         </span>
 
         <div className='flex flex-col mt-4'>
-          <div className='bg-base-card rounded-md p-10'>
-            <div className='flex flex-row'>
+          <div className='bg-base-card rounded-md p-4 md:p-10'>
+            <div className='flex flex-row gap-2'>
               <MapPinLine size={22} color={defaultTheme.yellow} />
               <div>
                 <p className='text-base-text text-roboto-text-m'>
