@@ -32,13 +32,47 @@ export function Checkout() {
                 </p>
               </div>
             </div>
-            <form className='mt-8'>
+            <form className='mt-8 grid grid-flow-row grid-cols-5 gap-4'>
               <input
                 type='number'
                 placeholder='CEP'
                 max={99999999}
                 min={0}
-                className='p-3 rounded-md'
+                className='p-3 rounded-md bg-base-input col-span-2'
+              />
+              <input
+                type='text'
+                placeholder='Rua'
+                className='p-3 rounded-md bg-base-input col-span-5'
+              />
+              <input
+                type='number'
+                placeholder='Número'
+                max={99999999}
+                min={0}
+                className='p-3 rounded-md bg-base-input col-span-2'
+              />
+              <input
+                type='text'
+                placeholder='Complemento'
+                className='p-3 rounded-md bg-base-input col-span-3'
+              />
+              <input
+                type='text'
+                placeholder='Bairro'
+                className='p-3 rounded-md bg-base-input col-span-2'
+              />
+              <input
+                type='text'
+                placeholder='Cidade'
+                className='p-3 rounded-md bg-base-input col-span-2'
+              />
+              <input
+                type='text'
+                placeholder='UF'
+                min={2}
+                max={2}
+                className='p-3 rounded-md bg-base-input'
               />
             </form>
           </div>
